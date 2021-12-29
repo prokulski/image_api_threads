@@ -18,7 +18,7 @@ gdzie **num** to dowolna liczba całkowita - wynikiem będzie niebieski obrazek 
 
 > <http://127.0.0.1:8000/chart/>*num*
 
-gdzie *num* to dowolna liczba całkowita - wynikiem będzie wykres funkcji kwadratowej $f(x) = x^2$ dla całkowitych $x$ z zakresu $<0; num>$
+gdzie *num* to dowolna liczba całkowita - wynikiem będzie wykres funkcji kwadratowej $ f(x) = x^2 $ dla całkowitych $ x $ z zakresu $ <0; num> $
 
 ## Uruchomienie grabbera
 
