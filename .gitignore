@@ -4,3 +4,4 @@ grabber/images/*.png
 grabber/charts/*.png
 grabber/wyniki.txt
 target/**
+analiza/**
