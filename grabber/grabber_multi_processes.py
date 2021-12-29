@@ -1,4 +1,4 @@
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor
 
 import time
 from os import remove, cpu_count
@@ -24,7 +24,7 @@ def main() -> None:
 
     # obrazki
     start_time = time.time()
-    with ThreadPoolExecutor(max_workers=num_cores) as executor:
+    with ProcessPoolExecutor(max_workers=num_cores) as executor:
         result = executor.map(get_image, id_list)
     elapsed_time = time.time() - start_time
     print(f'Pobranie obrazków: {elapsed_time:.3f}s, średnio {N_TIMES/elapsed_time:.3f}/s')
@@ -32,7 +32,7 @@ def main() -> None:
     # wykresy
 
     start_time = time.time()
-    with ThreadPoolExecutor(max_workers=num_cores) as executor:
+    with ProcessPoolExecutor(max_workers=num_cores) as executor:
         result = executor.map(get_chart, id_list)
     elapsed_time = time.time() - start_time
     print(f'Pobranie wykresów: {elapsed_time:.3f}s, średnio {N_TIMES/elapsed_time:.3f}/s')
