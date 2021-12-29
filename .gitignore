@@ -1,1 +1,4 @@
-.venv
+.venv/**
+**/__pycache__/**
+grabber/images/*.png
+grabber/charts/*.png
