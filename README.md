@@ -71,3 +71,16 @@ Na testowej maszynie osiągi (na 1000 iteracjach) był następujące:
 Pobranie obrazków: 2.884s, średnio 346.742/s
 Pobranie wykresów: 176.136s, średnio 5.677/s
 ```
+
+## Podsumowanie wyników
+
+Po wykonaniu po pięć pomiarów pobierających po 1000 obrazków i wykresów na dwóch różnych konfiguracjach (laptop i obciążony VPS) otrzymano wyniki:
+
+| machine   | type            | images total time | images per sec | charts total time | charts per sec |
+|:----------|:----------------|------------------:|---------------:|------------------:|---------------:|
+| laptop    | multi_processes |            **3.0582** |        **328.017** |           182.556 |         5.5114 |
+| laptop    | multi_threads   |            3.134  |        319.472 |           175.864 |         5.7282 |
+| laptop    | one_thread      |            4.8356 |        209.656 |           **175.133** |         **5.7156** |
+| vps       | multi_processes |            **6.1334** |        **165.604** |           287.963 |         3.478  |
+| vps       | multi_threads   |            7.816  |        141.712 |           292.753 |         3.4294 |
+| vps       | one_thread      |            9.855  |        102.185 |           **275.568** |         **3.631**  |
